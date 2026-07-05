@@ -50,10 +50,9 @@ jobs:
       - name: Coverage
         run: mvn test -P coverage --batch-mode
       - name: Upload coverage
-        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: javadoc-site
+          name: cobertura-site
           path: target/site/jacoco/
 
   build:
